@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            font-family:Arial, Helvetica, sans-serif;
-            margin:0;
-        }
-        .topnav{
-            overflow:hidden;
-            background-color: black;
-        }
-        .topnav a{
-            float:left;
-            color:darkorchid;
-            text-align:center;
-            padding:14px 16px;
-            font-size:17px;
-        }
-        .topnav a:hover{
-            background-color: black;
-            color:fuchsia;
-        }
-        .topnav a.active{
-            background-color:black;
-            color:hotpink;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
         }
 
-        body{
-            background-color:black;
-            color:white;
+        .topnav {
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .topnav a {
+            float: left;
+            color: darkorchid;
+            text-align: center;
+            padding: 14px 16px;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: black;
+            color: fuchsia;
+        }
+
+        .topnav a.active {
+            background-color: black;
+            color: hotpink;
+        }
+
+        body {
+            background-color: black;
+            color: white;
         }
     </style>
 </head>
+
 <body>
     <div class="topnav">
         <a class="active" href="Welcome.html">Home</a>
@@ -48,10 +54,36 @@
         <a href="Trial Three.html">Trial Three</a>
         <a href="Thank you.html">Thank you</a>
     </div>
+    <section>
+        <img class="mySlides" src="Slider 1.webp" style="height:200px; width:400px;">
+        <img class="mySlides" src="Slider 2.webp" style="height:200px; width:400px;">
+        <img class="mySlides" src="Slider 3.jpg" style="height:200px;
+        width:400px;">
+    </section>
     <h2>A Journey through the Underworld!☠️</h2>
-    <p>The Underworld—feared, mysterious, and the final destination for every mortal soul. Hidden beneath the earth, this vast realm is ruled by Hades, the god of the dead, and guarded by creatures that ensure no one leaves without permission...<br>
-    Here, souls are judged and sent to their rightful resting places. The heroic and righteous find peace in Elysium, while the ordinary drift through the endless Fields of Asphodel, and for the truly wicked? They suffer in the depths of Tartarus, where the worst of monsters and cursed souls reside.<br>
-    Cross the dark rivers, pass the towering gates, and step into a world few have ever seen and lived to tell the tale. But be warned—once you enter, getting out isn't so easy.
-</p>
+    <p>The Underworld—feared, mysterious, and the final destination for every mortal soul. Hidden beneath the earth,
+        this vast realm is ruled by Hades, the god of the dead, and guarded by creatures that ensure no one leaves
+        without permission...<br>
+        Here, souls are judged and sent to their rightful resting places. The heroic and righteous find peace in
+        Elysium, while the ordinary drift through the endless Fields of Asphodel, and for the truly wicked? They suffer
+        in the depths of Tartarus, where the worst of monsters and cursed souls reside.<br>
+        Cross the dark rivers, pass the towering gates, and step into a world few have ever seen and lived to tell the
+        tale. But be warned—once you enter, getting out isn't so easy.
+    </p>
+    <script>
+        var myIndex=0;
+        carousel();
+        function carousel(){
+            var i;
+            var x=document.getElementsByClassName("mySlides");
+            for(i=0; i<x.length; i++){
+                x[i].style.display="none";
+            }
+            myIndex++;
+            if(myIndex>x.length){myIndex=1}
+            x[myIndex-1].style.display="block";
+            setTimeout(carousel,3000);
+        }
+    </script>
 </body>
 </html>
